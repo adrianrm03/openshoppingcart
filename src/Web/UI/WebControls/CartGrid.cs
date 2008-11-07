@@ -28,8 +28,6 @@ namespace Serialcoder.ShoppingCart.Web.UI.WebControls
 
 		#endregion
 
-		#region Properties
-
 		protected override void OnInit(EventArgs e)
 		{
 			base.OnInit(e);
@@ -51,6 +49,8 @@ namespace Serialcoder.ShoppingCart.Web.UI.WebControls
 				}
 			}
 		}
+
+		#region Properties
 
 		[Bindable(true)]
 		[Category("Behavior")]
