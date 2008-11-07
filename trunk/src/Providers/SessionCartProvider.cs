@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Web;
 
-namespace Serialcoder.ShoppingCart.Providers
+namespace ShoppingCart.Providers
 {
     public sealed class SessionCartProvider : CartProvider
 	{
@@ -30,7 +30,7 @@ namespace Serialcoder.ShoppingCart.Providers
 			}
         }
 
-        private const string SESSION_KEY = "Serialcoder.ShoppingCart.SessionCartProvider";
+        private const string SESSION_KEY = "ShoppingCart.SessionCartProvider";
         public override List<CartItem> List
         {
             get
@@ -47,7 +47,7 @@ namespace Serialcoder.ShoppingCart.Providers
             }
         }
 
-        private const string SESSION_KEY_CONTEXT = "Serialcoder.ShoppingCart.SessionCartProvider.Context";
+        private const string SESSION_KEY_CONTEXT = "ShoppingCart.SessionCartProvider.Context";
         public override System.Collections.Specialized.HybridDictionary Context
         {
             get
@@ -75,7 +75,7 @@ namespace Serialcoder.ShoppingCart.Providers
             }
         }
 
-        private const string SESSION_KEY_CREATIONDATE = "Serialcoder.ShoppingCart.SessionCartProvider.CreationDate";
+        private const string SESSION_KEY_CREATIONDATE = "ShoppingCart.SessionCartProvider.CreationDate";
         public override DateTime CreationDate
         {
             get

@@ -12,7 +12,7 @@ using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Serialcoder.ShoppingCart.Web.UI.WebControls
+namespace ShoppingCart.Web.UI.WebControls
 {
 	[ToolboxData("<{0}:Cart runat=\"server\"></{0}:Cart>")]
 	[DefaultProperty("Columns")]

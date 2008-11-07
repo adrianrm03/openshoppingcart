@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Serialcoder.ShoppingCart
+namespace ShoppingCart
 {
     internal class CartProviderCollection : System.Configuration.Provider.ProviderCollection
     {

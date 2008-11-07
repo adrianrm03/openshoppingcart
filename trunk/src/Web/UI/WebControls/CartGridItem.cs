@@ -12,7 +12,7 @@ using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Serialcoder.ShoppingCart.Web.UI.WebControls
+namespace ShoppingCart.Web.UI.WebControls
 {
 	[System.ComponentModel.ToolboxItem(false)]
 	public class CartGridItem : TableRow , INamingContainer 

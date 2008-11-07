@@ -11,7 +11,7 @@ using System.Xml.Serialization;
 using System.Globalization;
 using System.Collections;
 
-namespace Serialcoder.ShoppingCart.Web.UI.WebControls
+namespace ShoppingCart.Web.UI.WebControls
 {
 	[Designer(typeof(System.Web.UI.Design.WebControls.ButtonDesigner))]
 	[ToolboxData("<{0}:AddToCartButton runat=\"server\" Text=\"Add\"></{0}:AddToCartButton>")]

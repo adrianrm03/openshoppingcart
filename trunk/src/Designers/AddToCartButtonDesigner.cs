@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.Design;
 
-namespace Serialcoder.ShoppingCart.Designers
+namespace ShoppingCart.Designers
 {
 	public class AddToCartButtonDesigner : ControlDesigner
 	{

@@ -11,7 +11,7 @@ using System.Xml.Serialization;
 using System.Globalization;
 using System.Collections;
 
-namespace Serialcoder.ShoppingCart.Web.UI.WebControls
+namespace ShoppingCart.Web.UI.WebControls
 {
 	[ParseChildren(false)]
 	[PersistChildrenAttribute(false)]
