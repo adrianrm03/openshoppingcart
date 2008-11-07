@@ -1,0 +1,196 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B780BF76-3BC9-499D-8FA3-392284477AD2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Serialcoder.ShoppingCart</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Serialcoder.ShoppingCart</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Name>System.Drawing.Design</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Cart.cd" />
+    <None Include="Web\UI\WebControls\AddToCartWebControls.cd" />
+    <None Include="Web\UI\WebControls\CartGrid.cd" />
+    <None Include="Web\UI\WebControls\Information.cd" />
+    <Compile Include="Designers\AddToCartButtonDesigner.cs" />
+    <Compile Include="Designers\AddToCartHyperLinkDesigner.cs" />
+    <Compile Include="Designers\AddToCartImageButtonDesigner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Providers\SessionCartProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CartItem.cs" />
+    <Compile Include="CartProvider.cs" />
+    <Compile Include="CartProviderCollection.cs" />
+    <Compile Include="Cart.cs" />
+    <Compile Include="CartServiceSection.cs" />
+    <Compile Include="Designers\CartGridDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\AddToCart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\AddToCartButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\AddToCartHyperLink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\AddToCartImageButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\BadEntryValidator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\CartColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\CartGrid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\CartGridItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\CartInformations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\DeleteCartColumnImageButton.cs" />
+    <Compile Include="Web\UI\WebControls\DeleteCartColumnButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\DeleteCartColumnLinkButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\EmptyCart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\EmptyCartButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\EmptyCartLinkButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\Information.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\LinkInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\QuantityCartColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\QuantityCartColumnTextBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\TemplateCartColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
