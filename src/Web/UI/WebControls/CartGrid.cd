@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.CartGrid">
+    <Position X="0.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\CartGrid.cs</FileName>
+      <HashCode>QAABAEAAQAAASBCAAAIAAwSAQQAAAEQACDAkAQgAIAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+      <Property Name="Columns" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.CartGridItem">
+    <Position X="3.75" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\CartGridItem.cs</FileName>
+      <HashCode>BAAAAAAAAAAAAAAgAAQAIAAEAAAAAAAAAAAGAAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.CartColumn">
+    <Position X="3.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\CartColumn.cs</FileName>
+      <HashCode>AQAAAAEAAQCACQAAAAgAAEAAAABEgAAABACAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.DeleteCartColumnButton">
+    <Position X="0.5" Y="8" Width="2" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\DeleteCartColumnButton.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAgAABAQAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.DeleteCartColumnLinkButton">
+    <Position X="2.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\DeleteCartColumnLinkButton.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAgAABAQAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.QuantityCartColumn">
+    <Position X="5.25" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\QuantityCartColumn.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.QuantityCartColumnTextBox">
+    <Position X="5.25" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\QuantityCartColumnTextBox.cs</FileName>
+      <HashCode>AAAAAAAAAACAASAAAAAAAgAAAAAAgAQAAAAAAAAQAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.TemplateCartColumn">
+    <Position X="7.75" Y="8" Width="2" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\TemplateCartColumn.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAwAAAAEAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.EmptyCart">
+    <Position X="7" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\EmptyCart.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.EmptyCartButton">
+    <Position X="6.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\EmptyCartButton.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAACAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.EmptyCartLinkButton">
+    <Position X="8.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\EmptyCartLinkButton.cs</FileName>
+      <HashCode>AAAAAAAgAAAAAAAQAAAAAAAAAAACAAAAACAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

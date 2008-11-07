@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.AddToCart">
+    <Position X="6.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\AddToCart.cs</FileName>
+      <HashCode>EIAAQOAAAAAwAACAAAAhAAAAAAAAAACAAAAEgABAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.AddToCartButton">
+    <Position X="3.25" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\AddToCartButton.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAADAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.AddToCartHyperLink">
+    <Position X="6.5" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\AddToCartHyperLink.cs</FileName>
+      <HashCode>AAAAAAAgAAAIAAAQAAAAAAAAAIACAAAAADAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.AddToCartImageButton">
+    <Position X="10.25" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Web\UI\WebControls\AddToCartImageButton.cs</FileName>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAIACAAAAACIEAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+</ClassDiagram>
