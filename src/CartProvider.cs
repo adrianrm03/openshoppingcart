@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Serialcoder.ShoppingCart
+namespace ShoppingCart
 {
     public abstract class CartProvider : System.Configuration.Provider.ProviderBase
     {
@@ -11,8 +11,8 @@ namespace Serialcoder.ShoppingCart
             this.name = name;
             base.Initialize(name, config);
 
-            minimalOrder = (config["minimalOrder"] == null) ? 0 : decimal.Parse(config["MinimalOrder"]);
-            allowSameProduct = (config["allowSameProduct"] == null) ? false : bool.Parse(config["AllowSameProduct"]);
+            minimalOrder = (config["minimalOrder"] == null) ? 0 : decimal.Parse(config["minimalOrder"]);
+            allowSameProduct = (config["allowSameProduct"] == null) ? false : bool.Parse(config["allowSameProduct"]);
         }
 
         private string name;

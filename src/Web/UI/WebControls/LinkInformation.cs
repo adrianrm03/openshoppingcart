@@ -11,7 +11,7 @@ using System.Xml.Serialization;
 using System.Globalization;
 using System.Collections;
 
-namespace Serialcoder.ShoppingCart.Web.UI.WebControls
+namespace ShoppingCart.Web.UI.WebControls
 {
 	[
 	ToolboxData("<{0}:LinkInformation runat=\"server\"></{0}:LinkInformation>")

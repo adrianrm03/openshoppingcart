@@ -5,7 +5,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
 
-namespace Serialcoder.ShoppingCart
+namespace ShoppingCart
 {
 	[Serializable]
     public class CartItem

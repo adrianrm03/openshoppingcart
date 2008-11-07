@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Font Name="Tahoma" Size="8.25" />
-  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.CartInformations">
+  <Class Name="ShoppingCart.Web.UI.WebControls.CartInformations">
     <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
       <FileName>Web\UI\WebControls\CartInformations.cs</FileName>
@@ -9,7 +9,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.Information">
+  <Class Name="ShoppingCart.Web.UI.WebControls.Information">
     <Position X="3.5" Y="1" Width="2.25" />
     <TypeIdentifier>
       <FileName>Web\UI\WebControls\Information.cs</FileName>
@@ -20,7 +20,7 @@
     </Compartments>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Serialcoder.ShoppingCart.Web.UI.WebControls.LinkInformation">
+  <Class Name="ShoppingCart.Web.UI.WebControls.LinkInformation">
     <Position X="7" Y="1" Width="1.75" />
     <TypeIdentifier>
       <FileName>Web\UI\WebControls\LinkInformation.cs</FileName>

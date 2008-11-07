@@ -1,6 +1,6 @@
 using System;
 
-namespace Serialcoder.ShoppingCart.Web.UI.WebControls
+namespace ShoppingCart.Web.UI.WebControls
 {
 	/// <summary>
 	/// Summary description for BadEntryValidator.

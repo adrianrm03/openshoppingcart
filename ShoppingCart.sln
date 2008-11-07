@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialcoder.ShoppingCart", "src\Serialcoder.ShoppingCart.csproj", "{B780BF76-3BC9-499D-8FA3-392284477AD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart", "src\ShoppingCart.csproj", "{B780BF76-3BC9-499D-8FA3-392284477AD2}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www", "www\", "{A7C01110-8767-4FF6-8A07-6F7895FE47B6}"
 	ProjectSection(WebsiteProperties) = preProject

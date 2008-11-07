@@ -4,7 +4,7 @@ using System.Text;
 using System.Web.Configuration;
 using System.Configuration.Provider;
 
-namespace Serialcoder.ShoppingCart
+namespace ShoppingCart
 {
     public sealed class Cart
     {
@@ -141,7 +141,6 @@ namespace Serialcoder.ShoppingCart
                     // Do this again to make sure _provider is still null
                     if (_provider == null)
                     {
-                        // Get a reference to the <imageService> section
                         CartServiceSection section = (CartServiceSection) WebConfigurationManager.GetSection("cartService");
 
                         // Load registered providers and point _provider
@@ -156,7 +155,7 @@ namespace Serialcoder.ShoppingCart
                         }
                         else
                         {
-                            ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(CartProviderCollection));
+                            ProvidersHelper.InstantiateProviders(section.Providers, _providers, typeof(CartProvider));
                             _provider = _providers[section.DefaultProvider];
                         }
 

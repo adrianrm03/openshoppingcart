@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Font Name="Tahoma" Size="8.25" />
-  <Class Name="Serialcoder.ShoppingCart.Cart">
+  <Class Name="ShoppingCart.Cart">
     <Position X="0.5" Y="3.75" Width="1.75" />
     <TypeIdentifier>
       <FileName>Cart.cs</FileName>
@@ -14,7 +14,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
   </Class>
-  <Class Name="Serialcoder.ShoppingCart.CartItem">
+  <Class Name="ShoppingCart.CartItem">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>CartItem.cs</FileName>
@@ -24,7 +24,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
   </Class>
-  <Class Name="Serialcoder.ShoppingCart.CartProvider">
+  <Class Name="ShoppingCart.CartProvider">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>CartProvider.cs</FileName>
@@ -37,7 +37,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
   </Class>
-  <Class Name="Serialcoder.ShoppingCart.Providers.SessionCartProvider">
+  <Class Name="ShoppingCart.Providers.SessionCartProvider">
     <Position X="3.25" Y="5.25" Width="1.75" />
     <TypeIdentifier>
       <FileName>Providers\SessionCartProvider.cs</FileName>
@@ -47,14 +47,14 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
   </Class>
-  <Class Name="Serialcoder.ShoppingCart.CartProviderCollection">
+  <Class Name="ShoppingCart.CartProviderCollection">
     <Position X="0.5" Y="2" Width="2" />
     <TypeIdentifier>
       <FileName>CartProviderCollection.cs</FileName>
       <HashCode>AAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Serialcoder.ShoppingCart.CartServiceSection">
+  <Class Name="ShoppingCart.CartServiceSection">
     <Position X="0.5" Y="0.5" Width="2" />
     <TypeIdentifier>
       <FileName>CartServiceSection.cs</FileName>

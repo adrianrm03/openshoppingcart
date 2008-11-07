@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Configuration;
 
-namespace Serialcoder.ShoppingCart
+namespace ShoppingCart
 {
     internal class CartServiceSection : System.Configuration.ConfigurationSection
     {

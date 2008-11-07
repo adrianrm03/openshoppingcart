@@ -15,7 +15,7 @@ using System.Web.UI;
 [assembly: AssemblyCopyright("Serialcoder 2006")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
-[assembly: TagPrefix("Serialcoder.ShoppingCart", "SCShoppingCart")]	
+[assembly: TagPrefix("ShoppingCart", "SCShoppingCart")]	
 
 //
 // Version information for an assembly consists of the following four values:

@@ -5,7 +5,7 @@ using System.Web.UI.WebControls;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 
-namespace Serialcoder.ShoppingCart.Web.UI.WebControls
+namespace ShoppingCart.Web.UI.WebControls
 {
 	[Designer(typeof(Designers.AddToCartButtonDesigner))]
 	[ToolboxData("<{0}:AddToCartButton runat=\"server\" Text=\"Add\"></{0}:AddToCartButton>")]
