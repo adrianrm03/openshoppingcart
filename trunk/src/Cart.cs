@@ -97,6 +97,14 @@ namespace ShoppingCart
             }
         }
 
+		public static int DistinctProductCount
+		{
+			get
+			{
+				return Provider.DistinctProductCount;
+			}
+		}
+
         #endregion
 
         #region Services

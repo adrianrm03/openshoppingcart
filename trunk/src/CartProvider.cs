@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace ShoppingCart
 {
@@ -91,6 +92,18 @@ namespace ShoppingCart
                 return 0;
             }
         }
+
+		public int DistinctProductCount
+		{
+			get
+			{
+				if (List != null)
+				{
+					return List.Select(i => i.ProductId).Distinct().Count();
+				}
+				return 0;
+			}
+		}
 
         private decimal minimalOrder;
         public decimal MinimalOrder
