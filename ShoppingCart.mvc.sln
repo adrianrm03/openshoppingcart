@@ -1,0 +1,67 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.Web.Mvc", "Mvc\ShoppingCart.Web.Mvc\ShoppingCart.Web.Mvc.csproj", "{1A8D3E58-2186-4858-A707-1086AA38B139}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.Web.Mvc.Tests", "Mvc\ShoppingCart.Web.Mvc.Tests\ShoppingCart.Web.Mvc.Tests.csproj", "{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcShoppingCart", "Mvc\MvcShoppingCart\MvcShoppingCart.csproj", "{D39FF819-048E-4E86-BD41-6C561700862E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Release|.NET.ActiveCfg = Release|Any CPU
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1A8D3E58-2186-4858-A707-1086AA38B139}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Release|.NET.ActiveCfg = Release|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7E689137-4EC0-4BE8-A4CE-6D69D4A9B5A2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Release|.NET.ActiveCfg = Release|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D39FF819-048E-4E86-BD41-6C561700862E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs01.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = src\\Serialcoder.ShoppingCart.csproj
+		SccProjectName1 = src
+		SccLocalPath1 = src
+		SccWebProject2 = true
+		SccProjectUniqueName2 = www
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = www\\
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+EndGlobal
