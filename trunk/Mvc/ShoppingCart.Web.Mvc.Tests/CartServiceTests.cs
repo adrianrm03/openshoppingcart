@@ -20,9 +20,11 @@ namespace ShoppingCart.Web.Mvc.Tests.Services
 		[SetUp]
 		public void Initialize()
 		{
-			var cachService = new MockCartRepository();
-			m_CartService = new ShoppingCart.Web.Mvc.Services.CartService(cachService);
+			var cartRepository = new MockCartRepository();
+			m_CartService = new ShoppingCart.Web.Mvc.Services.CartService(cartRepository);
 		}
+
+		#region Cart
 
 		[Test]
 		public void Get_Current_Cart()
@@ -57,12 +59,6 @@ namespace ShoppingCart.Web.Mvc.Tests.Services
 		}
 
 		[Test]
-		public void Get_Current_List()
-		{
-			throw new NotImplementedException();
-		}
-
-		[Test]
 		public void Add_Item()
 		{
 			var cart = m_CartService.CreateAndSaveCart("vis1");
@@ -76,12 +72,12 @@ namespace ShoppingCart.Web.Mvc.Tests.Services
 		public void Remove_Item()
 		{
 			var cart = m_CartService.CreateAndSaveCart("vis1");
-			
+
 			var price1 = new Model.Price(10.0, 0.196);
 			m_CartService.AddItem(cart, "test1", 1, 1, 2, price1);
 
 			var price2 = new Model.Price(20.0, 0.196);
-			m_CartService.AddItem(cart, "test2", 1 , 1, 3, price2);
+			m_CartService.AddItem(cart, "test2", 1, 1, 3, price2);
 
 			Assert.AreEqual(cart.ItemCount, 2);
 
@@ -108,29 +104,81 @@ namespace ShoppingCart.Web.Mvc.Tests.Services
 			Assert.AreEqual(cart.ItemCount, 0);
 		}
 
+		#endregion
+
+		#region Cart List
+
 		[Test]
-		public void Remove_Cart()
+		public void Get_Current_List_Empty()
 		{
-			throw new NotImplementedException();
+			var list = m_CartService.GetCurrentList("vid");
+			Assert.AreEqual(list.Count, 0);
 		}
 
 		[Test]
-		public void Delete_Cart()
+		public void Get_Current_List()
 		{
-			throw new NotImplementedException();
+			var cart = m_CartService.CreateCart("vid");
+			m_CartService.AddItem(cart, "p1", 1, 1, 1, new ShoppingCart.Web.Mvc.Model.Price(10.0, 0.196));
+			m_CartService.Save(cart);
+
+			var list = m_CartService.GetCurrentList("vid");
+			Assert.AreEqual(list.Count, 1);
+		}
+
+		[Test]
+		public void Remove_Cart()
+		{
+			var cart = m_CartService.CreateCart("vid");
+			m_CartService.AddItem(cart, "p1", 1, 1, 1, new ShoppingCart.Web.Mvc.Model.Price(10.0, 0.196));
+			m_CartService.Save(cart);
+
+			var list = m_CartService.GetCurrentList("vid");
+			Assert.AreEqual(list.Count, 1);
+
+			m_CartService.RemoveCart(cart);
+
+			list = m_CartService.GetCurrentList("vid");
+
+			Assert.AreEqual(list.Count, 0);
 		}
 
 		[Test]
 		public void Change_Current_Cart()
 		{
-			throw new NotImplementedException();
+			var cart1 = m_CartService.CreateCart("vid");
+			m_CartService.AddItem(cart1, "p1", 1, 1, 1, new ShoppingCart.Web.Mvc.Model.Price(10.0, 0.196));
+			m_CartService.Save(cart1);
+
+			var cart2 = m_CartService.CreateCart("vid");
+			m_CartService.AddItem(cart2, "p2", 1, 1, 1, new ShoppingCart.Web.Mvc.Model.Price(10.0, 0.196));
+			m_CartService.Save(cart2);
+
+			m_CartService.ChangeCurrent(cart1.Code);
+
+			var cart = m_CartService.GetCurrent();
+
+			Assert.AreEqual(cart.Code, cart1.Code);
+
+			m_CartService.ChangeCurrent(cart2.Code);
+
+			cart = m_CartService.GetCurrent();
+
+			Assert.AreEqual(cart.Code, cart2.Code);
 		}
 
 		[Test]
 		public void Add_Cart()
 		{
-			throw new NotImplementedException();
+			var cart1 = m_CartService.CreateCart("vid");
+			m_CartService.AddItem(cart1, "p1", 1, 1, 1, new ShoppingCart.Web.Mvc.Model.Price(10.0, 0.196));
+			m_CartService.Save(cart1);
+
+			var list = m_CartService.GetCurrentList("vid");
+
+			Assert.AreEqual(list.Count, 1);
 		}
 
+		#endregion
 	}
 }

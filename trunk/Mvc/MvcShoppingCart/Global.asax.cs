@@ -54,7 +54,7 @@ namespace MvcShoppingCart
 
 		private void RegisterSerivces()
 		{
-			var cartRepository = new ShoppingCart.Web.Mvc.Services.HttpCartRepository();
+			var cartRepository = new ShoppingCart.Web.Mvc.Services.HttpCartRepository(Context);
 			var cartService = new ShoppingCart.Web.Mvc.Services.CartService(cartRepository);
 			Application.Add("cartService", cartService);
 			var catalogService = new Services.CatalogService();

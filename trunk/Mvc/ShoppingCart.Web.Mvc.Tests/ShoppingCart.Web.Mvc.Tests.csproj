@@ -65,11 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\CartControllerTests.cs" />
+    <Compile Include="CartControllerTests.cs" />
     <Compile Include="MockHttpHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\CartServiceTests.cs" />
-    <Compile Include="Services\MockCartRepository.cs" />
+    <Compile Include="CartServiceTests.cs" />
+    <Compile Include="MockCartRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShoppingCart.Web.Mvc\ShoppingCart.Web.Mvc.csproj">

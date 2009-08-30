@@ -61,7 +61,7 @@ namespace ShoppingCart.Web.Mvc.Tests.Controllers
 		[Test]
 		public void New_Cart_Index()
 		{
-			var result = m_CartController.Add("xxx") as RedirectToRouteResult;
+			var result = m_CartController.AddItem("xxx") as RedirectToRouteResult;
 			var resultIndex = m_CartController.Index() as ViewResult;
 
 			var currentCart = resultIndex.ViewData.Model as Model.Cart;
@@ -70,9 +70,9 @@ namespace ShoppingCart.Web.Mvc.Tests.Controllers
 		}
 
 		[Test]
-		public void Add_Product_To_Cart()
+		public void Add_To_Cart()
 		{
-			var result = m_CartController.Add("xxx") as RedirectToRouteResult;
+			var result = m_CartController.AddItem("xxx") as RedirectToRouteResult;
 			Assert.IsInstanceOfType(typeof(RedirectToRouteResult), result);
 			Assert.AreEqual("Index", result.RouteValues["action"]);
 		}
@@ -80,7 +80,7 @@ namespace ShoppingCart.Web.Mvc.Tests.Controllers
 		[Test]
 		public void Clear_Cart()
 		{
-			var result = m_CartController.Add("XBOX360") as System.Web.Mvc.ViewResult;
+			var result = m_CartController.AddItem("XBOX360") as System.Web.Mvc.ViewResult;
 			var cart = result.ViewData.Model as Model.Cart;
 
 			Assert.IsNotNull(cart);

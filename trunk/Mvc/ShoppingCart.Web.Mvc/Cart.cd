@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ShoppingCart.Web.Mvc.Model.Cart">
+    <Position X="7" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>QIIEAEEAAAAACAAACAAkAAAAAAAAQBAAAAAAAgAACgA=</HashCode>
+      <FileName>Model\Cart.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ShoppingCart.Web.Mvc.Model.CartItem">
+    <Position X="9.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIICAEAACAAAAAAAAAAEAAAAAAAAQDQAAAAAggBAKgA=</HashCode>
+      <FileName>Model\CartItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShoppingCart.Web.Mvc.Model.Price">
+    <Position X="2.5" Y="3.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAIAACAAAAABABAAAAgAAAgAgIgAAAAAAA=</HashCode>
+      <FileName>Model\Price.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShoppingCart.Web.Mvc.Controllers.CartController">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAABAAIACIEAAgAAAghEEAEAEAAEEAABAAAA=</HashCode>
+      <FileName>Controllers\CartController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ShoppingCart.Web.Mvc.Services.ICartRepository">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAACAAABAAAAAAAAAAAAAAAAACAAAI=</HashCode>
+      <FileName>Services\ICartRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ShoppingCart.Web.Mvc.Services.ICartService">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACCAEIAAAAAEAAAAAABAABAAgAAAABAEAAAAAELAAAA=</HashCode>
+      <FileName>Services\ICartService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ShoppingCart.Web.Mvc.Services.ICatalogService">
+    <Position X="0.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAQAA=</HashCode>
+      <FileName>Services\ICatalogService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ShoppingCart.Web.Mvc.Services.IUserService">
+    <Position X="0.5" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\IUserService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

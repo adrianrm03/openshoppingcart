@@ -12,10 +12,10 @@ namespace ShoppingCart.Web.Mvc.Controllers
     public class CartController : Controller
     {
 		public CartController()
+			: this(System.Web.HttpContext.Current.Application["cartService"] as Services.ICartService
+			,System.Web.HttpContext.Current.Application["catalogService"] as Services.ICatalogService
+			,System.Web.HttpContext.Current.Application["userService"] as Services.IUserService)
 		{
-			this.CartService = System.Web.HttpContext.Current.Application["cartService"] as Services.ICartService;
-			this.CatalogService = System.Web.HttpContext.Current.Application["catalogService"] as Services.ICatalogService;
-			this.UserService = System.Web.HttpContext.Current.Application["userService"] as Services.IUserService;
 		}
 
 		public CartController(Services.ICartService cartService
@@ -33,7 +33,9 @@ namespace ShoppingCart.Web.Mvc.Controllers
 
 		protected Services.IUserService UserService { get; set; }
 
-        public ActionResult Index()
+		#region Cart
+
+		public ActionResult Index()
         {
 			var cart = CartService.GetCurrent();
 			if (cart == null)
@@ -44,7 +46,7 @@ namespace ShoppingCart.Web.Mvc.Controllers
             return View();
         }
 
-		public ActionResult Add(string productCode)
+		public ActionResult AddItem(string productCode)
 		{
 			var product = CatalogService.GetProductByCode(productCode);
 			if (product == null)
@@ -59,19 +61,21 @@ namespace ShoppingCart.Web.Mvc.Controllers
 			return RedirectToAction("Index");
 		}
 
-		public ActionResult JsAdd(string productCode)
+		#region Ajax
+
+		public ActionResult JsAddItem(string productCode)
 		{
 			var product = CatalogService.GetProductByCode(productCode);
-			return JsAddToCart(product, product.Packaging);
+			return JsAddItemToCart(product, product.Packaging);
 		}
 
-		public ActionResult JsAddWithQuantity(string productCode, int quantity)
+		public ActionResult JsAddItemWithQuantity(string productCode, int quantity)
 		{
 			var product = CatalogService.GetProductByCode(productCode);
-			return JsAddToCart(product, quantity);
+			return JsAddItemToCart(product, quantity);
 		}
 
-		private ActionResult JsAddToCart(ShoppingCart.Web.Mvc.Model.IProduct product, int quantity)
+		private ActionResult JsAddItemToCart(ShoppingCart.Web.Mvc.Model.IProduct product, int quantity)
 		{
 			if (product == null)
 			{
@@ -92,6 +96,8 @@ namespace ShoppingCart.Web.Mvc.Controllers
 				cartUrl = urlHelper.CartHref(),
 			});
 		}
+
+		#endregion
 
 		public ActionResult Clear()
 		{
@@ -132,7 +138,7 @@ namespace ShoppingCart.Web.Mvc.Controllers
 		}
 
 		[AcceptVerbs(HttpVerbs.Get)]
-		public ActionResult Remove(int index)
+		public ActionResult RemoveItem(int index)
 		{
 			var cart = CartService.GetCurrent();
 			CartService.RemoveItem(cart, index);
@@ -144,6 +150,21 @@ namespace ShoppingCart.Web.Mvc.Controllers
 			ViewData.Model = cart;
 			return View("Index");
 		}
+
+		#region Partial Rendering
+
+		public ActionResult ShowStatus(string viewName)
+		{
+			var cart = CartService.GetCurrent();
+			ViewData.Model = cart;
+			return View(string.Format("~/views/cart/{0}", viewName));
+		}
+
+		#endregion
+
+		#endregion
+
+		#region Cart List
 
 		public ActionResult Delete(string cartId)
 		{
@@ -178,13 +199,6 @@ namespace ShoppingCart.Web.Mvc.Controllers
 
 		#region Partial Rendering
 
-		public ActionResult ShowStatus(string viewName)
-		{
-			var cart = CartService.GetCurrent();
-			ViewData.Model = cart;
-			return View(string.Format("~/views/cart/{0}", viewName));
-		}
-
 		public ActionResult ShowCurrentCartList(string viewName)
 		{
 			var list = CartService.GetCurrentList(UserService.GetVisitorId());
@@ -197,5 +211,8 @@ namespace ShoppingCart.Web.Mvc.Controllers
 		}
 
 		#endregion
-    }
+
+		#endregion
+
+	}
 }

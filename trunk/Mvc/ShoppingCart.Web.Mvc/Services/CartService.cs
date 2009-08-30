@@ -150,7 +150,7 @@ namespace ShoppingCart.Web.Mvc.Services
 			routes.MapRoute(
 				"CartItemAdd"
 				, "cart/add/{*productCode}" 
-				, new { controller = "Cart", action = "Add" , productCode = string.Empty }
+				, new { controller = "Cart", action = "AddItem" , productCode = string.Empty }
 				, null
 				, nameSpaces
 			);
@@ -166,7 +166,7 @@ namespace ShoppingCart.Web.Mvc.Services
 			routes.MapRoute(
 				"CartItemDelete"
 				, "cart/remove/{index}"
-				, new { controller = "Cart", action = "Remove", index = 0 }
+				, new { controller = "Cart", action = "RemoveItem", index = 0 }
 				, new { index = @"\d+" }
 				, nameSpaces
 			);
