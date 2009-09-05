@@ -67,6 +67,17 @@ namespace ShoppingCart.Web.Mvc.Services
 		/// <param name="salePrice">The sale price.</param>
 		void AddItem(Model.Cart cart, string productCode, int saleUnitValue, int packagingValue, int quantity, Model.Price salePrice);
 		/// <summary>
+		/// Permet d'ajouter un produit dans le panier
+		/// </summary>
+		/// <param name="cart">The cart.</param>
+		/// <param name="productCode">The product code.</param>
+		/// <param name="saleUnitValue">The sale unit value.</param>
+		/// <param name="packagingValue">The packaging value.</param>
+		/// <param name="quantity">The quantity.</param>
+		/// <param name="salePrice">The sale price.</param>
+		/// <param name="recyclePrice">The recycle price.</param>
+		void AddItem(Model.Cart cart, string productCode, int saleUnitValue, int packagingValue, int quantity, Model.Price salePrice, Model.Price recyclePrice);
+		/// <summary>
 		/// Retire un item du panier en fonction de sa position dans la liste
 		/// </summary>
 		/// <param name="cart">The cart.</param>
