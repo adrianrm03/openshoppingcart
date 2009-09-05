@@ -66,7 +66,29 @@ namespace ShoppingCart.Web.Mvc.Tests.Services
 			m_CartService.AddItem(cart, "test1", 1, 1, 2, price);
 			Assert.AreEqual(cart.ItemCount, 1);
 			Assert.AreEqual(cart.Total, 10 * 2);
+			Assert.AreEqual(cart.TotalTax, 10 * 2 * 0.196m);
+			Assert.AreEqual(cart.TotalWithTax, 10 * 2 * 1.196m);
 		}
+
+		[Test]
+		public void Add_Item_With_Recycle_Price()
+		{
+			var cart = m_CartService.CreateAndSaveCart("vis1");
+			var price = new Model.Price(10.0, 0.196);
+			var recycle = new Model.Price(0.1, 0.196);
+			m_CartService.AddItem(cart, "test1", 1, 1, 2, price, recycle);
+			Assert.AreEqual(cart.ItemCount, 1);
+			Assert.AreEqual(cart.Total, 10 * 2);
+			Assert.AreEqual(cart.TotalTax, 10 * 2 * 0.196m);
+			Assert.AreEqual(cart.TotalWithTax, 10 * 2 * 1.196m);
+			Assert.AreEqual(cart.RecycleTotal, 0.1 * 2);
+			Assert.AreEqual(cart.RecycleTaxTotal, 0.1m * 2 * 0.196m);
+			Assert.AreEqual(cart.RecycleTotalWithTax, 0.1m * 2 * 1.196m);
+			Assert.AreEqual(cart.GrandTotal, (10 + 0.1) * 2);
+			Assert.AreEqual(cart.GrandTaxTotal, (10 + 0.1m) * 2 * 0.196m);
+			Assert.AreEqual(cart.GrandTotalWithTax, (10 + 0.1m) * 2 * 1.196m);
+		}
+
 
 		[Test]
 		public void Remove_Item()

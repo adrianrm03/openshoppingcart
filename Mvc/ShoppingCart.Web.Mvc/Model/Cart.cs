@@ -174,7 +174,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		{
 			get
 			{
-				return TotalWithTax + RecycleTotalWithTax + TotalWithTax;
+				return TotalWithTax + RecycleTotalWithTax;
 			}
 		}
 

@@ -80,7 +80,7 @@ namespace ShoppingCart.Web.Mvc.Tests.Controllers
 		[Test]
 		public void Clear_Cart()
 		{
-			var result = m_CartController.AddItem("XBOX360") as System.Web.Mvc.ViewResult;
+			var result = m_CartController.AddItem("xxx") as System.Web.Mvc.ViewResult;
 			var cart = result.ViewData.Model as Model.Cart;
 
 			Assert.IsNotNull(cart);

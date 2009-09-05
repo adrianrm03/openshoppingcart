@@ -80,6 +80,11 @@ namespace ShoppingCart.Web.Mvc.Services
 
 		public void AddItem(Model.Cart cart, string productCode, int saleUnitValue, int packagingValue, int quantity, Model.Price salePrice)
 		{
+			AddItem(cart, productCode, saleUnitValue, packagingValue, quantity, salePrice, null);
+		}
+
+		public void AddItem(Model.Cart cart, string productCode, int saleUnitValue, int packagingValue, int quantity, Model.Price salePrice, Model.Price recyclePrice)
+		{
 			var existing = cart.Items.SingleOrDefault(i => i.ProductCode.Equals(productCode, StringComparison.InvariantCultureIgnoreCase));
 			if (existing == null)
 			{
@@ -90,6 +95,7 @@ namespace ShoppingCart.Web.Mvc.Services
 					SalePrice = salePrice,
 					SaleUnitValue = saleUnitValue,
 					Packaging = packagingValue,
+					RecyclePrice = recyclePrice ?? new Model.Price(0m,0d),
 				});
 			}
 			else
