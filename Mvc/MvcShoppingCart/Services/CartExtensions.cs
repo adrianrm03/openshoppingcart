@@ -12,5 +12,10 @@ namespace MvcShoppingCart.Services
 			var catalogService = System.Web.HttpContext.Current.Application["catalogService"] as Services.CatalogService;
 			return (Models.Product)catalogService.GetProductByCode(cartItem.ProductCode);
 		}
+
+		public static string ToCurrency(this decimal value)
+		{
+			return string.Format("{0:#,##0.00}", value);
+		}
 	}
 }

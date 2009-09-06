@@ -20,7 +20,7 @@ namespace ShoppingCart.Web.Mvc.Services
 
 		public string GetCartId()
 		{
-			var cookie = m_HttpContext.Request.Cookies[CART_COOKIE_NAME];
+			var cookie = System.Web.HttpContext.Current.Request.Cookies[CART_COOKIE_NAME];
 			if (cookie == null)
 			{
 				cookie = new System.Web.HttpCookie(CART_COOKIE_NAME);

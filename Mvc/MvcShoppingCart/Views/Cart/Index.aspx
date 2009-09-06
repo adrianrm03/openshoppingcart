@@ -49,7 +49,7 @@
 				<%=item.SaleUnitValue%>
 			</td>
 			<td align="right">
-				<% =item.Total %>
+				<% =item.Total.ToCurrency() %>
 			</td>
 		</tr>
 		<% } %>
@@ -61,7 +61,7 @@
 				Total
 			</td>
 			<td align="right">
-				<%=Model.Total%>
+				<%=Model.Total.ToCurrency()%>
 			</td>
 		</tr>
 		<tr>
@@ -69,7 +69,7 @@
 				Tax Total
 			</td>
 			<td align="right">
-				<%=Model.TotalTax%>
+				<%=Model.TotalTax.ToCurrency()%>
 			</td>
 		</tr>
 		<tr>
@@ -78,7 +78,7 @@
 			</td>
 			<td align="right">
 				<b>
-					<%=Model.TotalWithTax%></b>
+					<%=Model.TotalWithTax.ToCurrency()%></b>
 			</td>
 		</tr>
 	</table>
