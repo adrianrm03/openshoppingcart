@@ -42,7 +42,7 @@ namespace ShoppingCart.Web.Mvc.Controllers
 			{
 				return View("EmptyCart");
 			}
-			ViewData.Model = CartService.GetCurrent();
+			ViewData.Model = cart;
             return View();
         }
 
@@ -58,7 +58,7 @@ namespace ShoppingCart.Web.Mvc.Controllers
 			var price = CatalogService.GetPriceByProduct(product);
 			CartService.AddItem(cart, product.Code, product.SaleUnitValue, product.Packaging, product.Packaging, price);
 			ViewData.Model = cart;
-			return RedirectToAction("Index");
+			return View("Index");
 		}
 
 		#region Ajax
