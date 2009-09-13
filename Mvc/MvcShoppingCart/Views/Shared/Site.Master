@@ -4,7 +4,57 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
-    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+	<link  href="/Content/jquery-ui-1.7.2.custom.css" rel="stylesheet" type="text/css" />	
+	<script src="/Scripts/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<script src="/Scripts/jquery-ui-1.7.2.custom.min.js" type="text/javascript"></script>
+	
+			<script type="text/javascript">
+				$(function() {
+
+					// Add to cart Dialog			
+					$('#dialog').dialog({
+						autoOpen: false
+					});
+
+					// Add to cart Link
+					$('.addtocart_link').click(function() {
+					
+						var productCode = $(this).attr('id').split('|')[1];
+						
+						var cartUrl = null;
+						$.getJSON("/Cart/JsAddItem", { productCode: productCode }, function(data) {
+							$('#dialog').html(data.quantity + ' ' + data.title + ' was added to your cart, do you wish ?');
+							cartUrl = data.cartUrl;
+						});
+
+						$("#dialog").dialog('option', 'buttons', {
+							'Continue': function() {
+								$(this).dialog("close");
+							},
+							'Go to cart': function() {
+								document.location = cartUrl;
+								$(this).dialog("close");
+							}
+						});
+
+						$('#dialog').dialog('open');
+
+						$('#cartstatus').load('/cart/ShowCurrentCart', { viewName: '~/views/cart/cartstatus.ascx' }, function(html) {
+							$('#cartstatus')[0].value = html;
+						})
+
+						return false;
+					});
+
+					$('#cartstatus').load('/cart/ShowCurrentCart', { viewName: '~/views/cart/cartstatus.ascx' }, function(html) {
+						$('#cartstatus')[0].value = html;
+					})
+
+				});
+
+		</script>
+
 </head>
 
 <body>
@@ -19,12 +69,14 @@
                 <% Html.RenderPartial("LogOnUserControl"); %>
             </div> 
             
+            <div id="cartstatus">
+            </div>
+            
             <div id="menucontainer">
             
                 <ul id="menu">              
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("About", "About", "Home")%></li>
-                    <li><%= Html.CartLink("Cart") %></li>
                     <li><%= Html.ActionLink("Catalog", "Catalog", "Home") %></li>
                 </ul>
             </div>
@@ -37,5 +89,9 @@
             </div>
         </div>
     </div>
+	<div id="dialog" title="Add to cart" class="ui-dialog">
+		
+    </div>
+  
 </body>
 </html>

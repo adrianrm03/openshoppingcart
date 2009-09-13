@@ -33,34 +33,13 @@ namespace MvcShoppingCart
 			RegisterRoutes(RouteTable.Routes);
 		}
 
-		public void Application_BeginRequest(object sender, EventArgs args)
-		{
-			var vidCookie = Request.Cookies["vid"];
-			if (vidCookie == null)
-			{
-				CreateVisitorCookie(Context, "vid");
-			}
-		}
-
-		HttpCookie CreateVisitorCookie(HttpContext ctx, string name)
-		{
-			var cookie = new System.Web.HttpCookie(name);
-			cookie.Expires = DateTime.Now.AddDays(60);
-			cookie.Path = "/";
-			cookie.Value = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 20);
-			ctx.Response.Cookies.Add(cookie);
-			return cookie;
-		}
-
 		private void RegisterSerivces()
 		{
-			var cartRepository = new ShoppingCart.Web.Mvc.Services.HttpCartRepository(Context);
+			var cartRepository = new ShoppingCart.Web.Mvc.Services.HttpContextCartRepository();
 			var cartService = new ShoppingCart.Web.Mvc.Services.CartService(cartRepository);
 			Application.Add("cartService", cartService);
 			var catalogService = new Services.CatalogService();
 			Application.Add("catalogService", catalogService);
-			var userService = new Services.UserService(Context);
-			Application.Add("userService", userService);
 		}
 	}
 }

@@ -5,15 +5,12 @@ using System.Text;
 
 namespace ShoppingCart.Web.Mvc.Services
 {
-	public class HttpCartRepository : ICartRepository
+	public class HttpContextCartRepository : ICartRepository
 	{
 		public const string CART_COOKIE_NAME = "cartId";
 
-		private System.Web.HttpContext m_HttpContext;
-
-		public HttpCartRepository(System.Web.HttpContext ctx)
+		public HttpContextCartRepository()
 		{
-			m_HttpContext = ctx;
 		}
 
 		#region ICartRepository Members
@@ -38,19 +35,19 @@ namespace ShoppingCart.Web.Mvc.Services
 			cookie.Expires = DateTime.Now.AddDays(30);
 			cookie.Path = "/";
 			cookie.Value = cartId;
-			m_HttpContext.Response.Cookies.Add(cookie);
+			System.Web.HttpContext.Current.Response.Cookies.Add(cookie);
 		}
 
 		public void Remove(string cartId)
 		{
 			var key = GetKey(cartId);
-			m_HttpContext.Response.Cookies.Remove(CART_COOKIE_NAME);
+			System.Web.HttpContext.Current.Response.Cookies.Remove(CART_COOKIE_NAME);
 		}
 
 		public void Remove(Model.Cart cart)
 		{
 			var key = GetKey(cart.Code);
-			m_HttpContext.Cache.Remove(key);
+			System.Web.HttpContext.Current.Cache.Remove(key);
 		}
 
 		public Model.Cart this[string cartId]
@@ -58,19 +55,19 @@ namespace ShoppingCart.Web.Mvc.Services
 			get
 			{
 				var key = GetKey(cartId);
-				return m_HttpContext.Cache[key] as Model.Cart;
+				return System.Web.HttpContext.Current.Cache[key] as Model.Cart;
 			}
 		}
 
 		public void Save(Model.Cart cart)
 		{
 			var key = GetKey(cart.Code);
-			m_HttpContext.Cache.Insert(key, cart, null, DateTime.Now.AddDays(1), TimeSpan.Zero);
+			System.Web.HttpContext.Current.Cache.Insert(key, cart, null, DateTime.Now.AddDays(1), TimeSpan.Zero);
 		}
 
 		public IQueryable<Model.Cart> GetList()
 		{
-			return m_HttpContext.Cache.GetListOf<Model.Cart>();
+			return System.Web.HttpContext.Current.Cache.GetListOf<Model.Cart>();
 		}
 
 		#endregion

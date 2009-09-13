@@ -61,7 +61,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// Montant total HT de l'eco taxe
 		/// </summary>
 		/// <value>The recycle total.</value>
-		public decimal RecycleTotal
+		public virtual decimal RecycleTotal
 		{
 			get
 			{
@@ -76,7 +76,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// Montant de la tva de l'eco taxe
 		/// </summary>
 		/// <value>The recycle tax total.</value>
-		public decimal RecycleTaxTotal
+		public virtual decimal RecycleTaxTotal
 		{
 			get
 			{
@@ -91,7 +91,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// Montant total TTC de l'eco taxe
 		/// </summary>
 		/// <value>The recycle total with tax.</value>
-		public decimal RecycleTotalWithTax
+		public virtual decimal RecycleTotalWithTax
 		{
 			get
 			{
@@ -106,7 +106,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// Montant total de la ligne HT hors eco taxe
 		/// </summary>
 		/// <value>The total.</value>
-		public decimal Total
+		public virtual decimal Total
 		{
 			get
 			{
@@ -117,7 +117,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// Montant total de la tva de la ligne hors eco taxe
 		/// </summary>
 		/// <value>The total tax.</value>
-		public decimal TotalTax
+		public virtual decimal TotalTax
 		{
 			get
 			{
@@ -129,7 +129,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// Montant total ttc de la ligne hors eco taxe
 		/// </summary>
 		/// <value>The total with tax.</value>
-		public decimal TotalWithTax
+		public virtual decimal TotalWithTax
 		{
 			get
 			{
@@ -140,7 +140,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// Montant total ht de la ligne, y compris l'eco taxe
 		/// </summary>
 		/// <value>The grand total.</value>
-		public decimal GrandTotal
+		public virtual decimal GrandTotal
 		{
 			get
 			{
@@ -151,7 +151,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// Montant total de la tva , y compris l'eco taxe
 		/// </summary>
 		/// <value>The grand tax total.</value>
-		public decimal GrandTaxTotal
+		public virtual decimal GrandTaxTotal
 		{
 			get
 			{
@@ -162,7 +162,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// Montant total ttc de la ligne, y compris l'eco taxe
 		/// </summary>
 		/// <value>The grand total with tax.</value>
-		public decimal GrandTotalWithTax
+		public virtual decimal GrandTotalWithTax
 		{
 			get
 			{

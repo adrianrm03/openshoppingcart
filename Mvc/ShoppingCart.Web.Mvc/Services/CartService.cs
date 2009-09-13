@@ -85,6 +85,7 @@ namespace ShoppingCart.Web.Mvc.Services
 
 		public void AddItem(Model.Cart cart, string productCode, int saleUnitValue, int packagingValue, int quantity, Model.Price salePrice, Model.Price recyclePrice)
 		{
+			quantity = Math.Max(1, quantity);
 			var existing = cart.Items.SingleOrDefault(i => i.ProductCode.Equals(productCode, StringComparison.InvariantCultureIgnoreCase));
 			if (existing == null)
 			{
