@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+
 using ShoppingCart.Web.Mvc.Html;
+using ShoppingCart.Web.Mvc.Services;
 
 namespace ShoppingCart.Web.Mvc.Controllers
 {
@@ -13,25 +15,20 @@ namespace ShoppingCart.Web.Mvc.Controllers
     {
 		public CartController()
 			: this(System.Web.HttpContext.Current.Application["cartService"] as Services.ICartService
-			,System.Web.HttpContext.Current.Application["catalogService"] as Services.ICatalogService
-			,System.Web.HttpContext.Current.Application["userService"] as Services.IUserService)
+			,System.Web.HttpContext.Current.Application["catalogService"] as Services.ICatalogService)
 		{
 		}
 
 		public CartController(Services.ICartService cartService
-			,Services.ICatalogService catalogService
-			,Services.IUserService userService)
+			,Services.ICatalogService catalogService)
 		{
 			this.CartService = cartService;
 			this.CatalogService = catalogService;
-			this.UserService = userService;
 		}
 
 		protected Services.ICartService CartService { get; set; }
 
 		protected Services.ICatalogService CatalogService { get; set; }
-
-		protected Services.IUserService UserService { get; set; }
 
 		#region Cart
 
@@ -54,7 +51,7 @@ namespace ShoppingCart.Web.Mvc.Controllers
 				return RedirectToRoute("Default");
 			}
 
-			var cart = CartService.GetOrCreateCart(UserService.GetVisitorId());
+			var cart = CartService.GetOrCreateCart(Request.AnonymousID);
 			var price = CatalogService.GetPriceByProduct(product);
 			CartService.AddItem(cart, product.Code, product.SaleUnitValue, product.Packaging, product.Packaging, price);
 			ViewData.Model = cart;
@@ -82,7 +79,7 @@ namespace ShoppingCart.Web.Mvc.Controllers
 				return new JsonResult();
 			}
 			var price = CatalogService.GetPriceByProduct(product);
-			var cart = CartService.GetOrCreateCart(UserService.GetVisitorId());
+			var cart = CartService.GetOrCreateCart(Request.AnonymousID);
 			CartService.AddItem(cart, product.Code, product.SaleUnitValue, product.Packaging, quantity, price);
 
 			var urlHelper = new UrlHelper(this.ControllerContext.RequestContext);
@@ -191,7 +188,7 @@ namespace ShoppingCart.Web.Mvc.Controllers
 
 		public ActionResult Create()
 		{
-			var cart = CartService.CreateCart(UserService.GetVisitorId());
+			var cart = CartService.CreateCart(Request.AnonymousID);
 			CartService.AddCart(cart);
 			CartService.ChangeCurrent(cart.Code);
 			return Redirect("/");
@@ -201,13 +198,20 @@ namespace ShoppingCart.Web.Mvc.Controllers
 
 		public ActionResult ShowCurrentCartList(string viewName)
 		{
-			var list = CartService.GetCurrentList(UserService.GetVisitorId());
+			var list = CartService.GetCurrentList(Request.AnonymousID);
 			if (list == null)
 			{
 				list = new List<Model.Cart>();
 			}
 			ViewData.Model = list;
-			return View(string.Format("~/views/cart/{0}", viewName));
+			return View(string.Format("~/views/cart/{0}", viewName));;
+		}
+
+		public ActionResult ShowCurrentCart(string viewName)
+		{
+			var cart = CartService.GetCurrent();
+			ViewData.Model = cart;
+			return View(viewName);
 		}
 
 		#endregion

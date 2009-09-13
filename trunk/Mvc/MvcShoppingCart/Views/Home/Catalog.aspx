@@ -12,7 +12,9 @@
     
     <% =product.Title %>
     <% = Html.AddToCart("Add to cart", product.Code) %>
-		   
+
+	Ajax add <a href="#" class="addtocart_link" title="Add to cart" id="addtocart|<%=product.Code%>"><%=product.Title%></a> to cart
+	<br />
 	<% } %>
 
 </asp:Content>

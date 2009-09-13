@@ -18,35 +18,26 @@ namespace MvcShoppingCart.Services
 
 		internal IEnumerable<Models.Product> GetProductList()
 		{
-			yield return new Models.Product()
+			for (int i = 0; i < 20; i++)
 			{
-				Code = "1",
-				DefaultTaxRate = 0.196,
-				Packaging = 5,
-				SaleUnitValue = 1,
-				Title = "Product 1",
-				SalePrice = Convert.ToDecimal(10.0),
-			};
-
-			yield return new Models.Product()
-			{
-				Code = "2",
-				DefaultTaxRate = 0.196,
-				Packaging = 1,
-				SaleUnitValue = 1,
-				Title = "Product 2",
-				SalePrice = Convert.ToDecimal(15.0),
-			};
+				yield return new Models.Product()
+				{
+					Code = i.ToString(),
+					DefaultTaxRate = 0.196,
+					Packaging = Math.Max(1, new Random().Next(10)),
+					SaleUnitValue = 1,
+					Title = string.Format("Product {0}", i + 1),
+					SalePrice = new Random().Next(1000),
+				};
+			}
 
 			yield break;
 		}
-
 
 		public ShoppingCart.Web.Mvc.Model.Price GetPriceByProduct(ShoppingCart.Web.Mvc.Model.IProduct product)
 		{
 			var realProduct = product as Models.Product;
 			return new ShoppingCart.Web.Mvc.Model.Price(realProduct.SalePrice, realProduct.DefaultTaxRate);
 		}
-
 	}
 }

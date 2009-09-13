@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using ShoppingCart.Web.Mvc.Services;
+
 namespace MvcShoppingCart.Controllers
 {
 	[HandleError]
@@ -18,8 +20,7 @@ namespace MvcShoppingCart.Controllers
 
 		public ActionResult Index()
 		{
-			ViewData["Message"] = "Welcome to ASP.NET MVC!";
-
+			ViewData["Message"] = "Welcome to Open Shopping Cart for ASP.NET MVC!";
 			return View();
 		}
 

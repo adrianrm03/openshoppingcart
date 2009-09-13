@@ -281,6 +281,7 @@ div#title
     color:White;
 }
 
+
 #logindisplay a:link
 {
     color: white;
@@ -298,6 +299,22 @@ div#title
     color: white;
     text-decoration: none;
 }
+
+#cartstatus
+{
+    font-size:1.1em;
+    display:block;
+    text-align:right;
+    margin:10px;
+    color:White;
+}
+
+#cartstatus a:link
+{
+    color: white;
+    text-decoration: underline;
+}
+
 
 .field-validation-error
 {

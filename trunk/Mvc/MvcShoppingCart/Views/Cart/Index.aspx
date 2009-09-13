@@ -84,6 +84,15 @@
 	</table>
 	<% Html.EndForm(); %>
 	<p>Click <% =Html.ClearCartLink("here")%> for clear cart</p>
-
-
+	
+	<script type="text/javascript">
+		$(function() {
+		$('#cartlist').load('/cart/GetCurrentCartList', { viewName: 'cartlist.ascx' }, function(html) {
+				$('#cartlist')[0].value = html;
+			})
+		})
+	</script>
+	
+	<div id="cartlist"></div>
+	
 </asp:Content>

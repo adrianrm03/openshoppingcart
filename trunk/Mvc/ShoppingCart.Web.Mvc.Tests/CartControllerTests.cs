@@ -45,13 +45,9 @@ namespace ShoppingCart.Web.Mvc.Tests.Controllers
 			catalogService.Setup(i => i.GetProductByCode("xxx")).Returns(product.Object);
 			catalogService.Setup(i => i.GetPriceByProduct(product.Object)).Returns(new ShoppingCart.Web.Mvc.Model.Price(10.0, 0.196));
 
-			var userService = new Moq.Mock<Mvc.Services.IUserService>();
-			userService.Setup(i => i.GetVisitorId()).Returns("vid");
-
 			var controller = new ShoppingCart.Web.Mvc.Controllers.CartController(
 				cartService, 
-				catalogService.Object,
-				userService.Object);
+				catalogService.Object);
 
 			controller.ControllerContext = mock.Object;
 
