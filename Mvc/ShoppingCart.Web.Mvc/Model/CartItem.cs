@@ -153,7 +153,7 @@ namespace ShoppingCart.Web.Mvc.Model
 		/// <value>The grand tax total.</value>
 		public virtual decimal GrandTaxTotal
 		{
-			get
+				get
 			{
 				return TotalTax + RecycleTaxTotal;
 			}
